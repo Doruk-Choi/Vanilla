@@ -1,9 +1,13 @@
 body {
-    font-family: 'Times New Roman';  
+    font-family: 'Times New Roman';
+    text-align: center;
+    text-shadow: 1px 1px 3px rgb(197, 184, 184);
+    color: #5a0808 
 }
 
 .form, .greetings {
     display: none;
+    
 }
 
 .showing {

@@ -7,17 +7,37 @@
     </head>
 
     <body>
+        <h2 class="h2Clock"></h2>
+        
+
         <h1>To Do Lists</h1>
 
         <form class="js-greetingForm form">
             <input class="js-greetingInput" type="text" placeholder="What is your name??" />
         </form>
-        <h1 class="h2UserName greetings"></h1>
-        <h2 class="h2Clock"></h2>
-                
+
+        <h2 class="h2UserName greetings"></h2>
         
+        <form id="js-form">
+            <input type="text" placeholder="Please, write a your plan" />
+        </form>
+
+        <div>
+            <h3>Pending</h3>
+            <ul id="js-pending"></ul>
+        </div>
+
+        <div>
+            <h3>Finished</h3>
+            <ul id="js-finished"></ul>
+        </div>
+
+        <spanc class="js-weather"></spanc>
 
         <script src="clock.js"></script>
+        <script src="weather.js"></script>
         <script src="greeting.js"></script>
+        <script src="toDo.js"></script>
+        <script src="bg.js"></script>
     </body>
 </html>
