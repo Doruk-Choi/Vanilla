@@ -1,5 +1,4 @@
-const time = document.querySelector(".js-clock");
-const clockTitle = time.querySelector(".h1Clock");
+const clockTitle = document.querySelector(".h2Clock");
 // Clock 
 
 function currentTime() {

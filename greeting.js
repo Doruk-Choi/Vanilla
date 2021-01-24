@@ -1,19 +1,20 @@
-const greetingForm = document.querySelector(".js-greetingForm"),
-    greetingInput = document.querySelector(".js-greetingInput"),
-    greeting = document.querySelector(".js-greetings");
+const greetingForm = document.querySelector(".js-greetingForm");
+const greetingInput = greetingForm.querySelector(".js-greetingInput");
+const greeting = document.querySelector(".h2UserName");
 
 const USER_LS = "currentUser",
     SHOWING_CN = "showing";
 
-function saveName(text) {
+
+function saveUserName(text) {
     localStorage.setItem(USER_LS, text);
 }
 
 function handleSubmit(event) {
     event.preventDefault();
-    const currentValue = greetingInput.value;
-    paintGreeting(currentValue);
-    saveName(currentValue);
+    let currentValue = greetingInput.value;
+    showGreeting(currentValue);
+    saveUserName(currentValue);
 }
 
 function askForName() {
@@ -21,18 +22,18 @@ function askForName() {
     greetingForm.addEventListener("submit", handleSubmit);
 }
 
-function paintGreeting(text) {
-    greetingForm.remove(SHOWING_CN);
+function showGreeting(text) {
+    greetingForm.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
     greeting.innerText = `Hello ${text}`;
 }
 
 function loadName() {
     const currentUser = localStorage.getItem(USER_LS);
-    if (currentUser === null) {
+    if(currentUser === null) {
         askForName();
     } else {
-        paintGreeting(currentUser);
+        showGreeting(currentUser);
     }
 }
 

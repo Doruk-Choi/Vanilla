@@ -1,23 +1,13 @@
 body {
-    font-family: 'Times New Roman', Times, serif;
-    background-color: peru;   
-    color: white;
+    font-family: 'Times New Roman';  
 }
 
-.greeting {
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.btn {
-    cursor: pointer;
-}
-
-.form {
+.form, .greetings {
     display: none;
 }
 
-.greetings {
-    display: none;
+.showing {
+    display: block;
 }
 
 .btn {
@@ -28,9 +18,7 @@ body {
     color: #7f8c8d;
 }
 
-.showing {
-    display: block;
-}
+
 
 @keyframes fadeIn {
     from {
